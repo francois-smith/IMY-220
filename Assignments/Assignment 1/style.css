@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Nunito:wght@300;400&display=swap');
+
+.card-heading{
+    font-family: 'Nunito', sans-serif;
+}
+
+.card-body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+i{
+    margin-left: 10px !important;
+    transition: all 0.25s;
+}
+
+@media screen and (min-width: 992px) {
+    button:hover i{
+        transform: rotate(90deg);
+        margin-left: 20px !important;
+    }
+
+}
+    
