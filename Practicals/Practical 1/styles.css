@@ -1,0 +1,17 @@
+:root{
+    --light-blue: #add8e6;
+    --pink: #ffc0cb;
+}
+
+div[class~="col"] {
+    border: var(--light-blue) 3px solid;
+    border-radius: 20px;
+}
+
+div[class~="col"]:nth-child(2n) {
+    border: var(--pink) 3px solid;
+}
+
+div[class~="row"] {
+    margin: 5px;
+}
