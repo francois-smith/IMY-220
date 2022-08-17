@@ -9,5 +9,5 @@ var events = [
 ];
 
 let eventHandler = new EventHandler(events);
-let sortedEvents = eventHandler.getUniqueDateAndSort();
+let sortedEvents = eventHandler.getByMonth(6);
 console.log(sortedEvents);
