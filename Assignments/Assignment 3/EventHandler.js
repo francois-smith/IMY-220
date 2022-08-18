@@ -24,7 +24,7 @@ class EventHandler extends Array{
         return new EventHandler(events.sort(
             (event1, event2) => new Date(event1.dateStart).getMonth() - new Date(event2.dateStart).getMonth()
         ).filter(function(value, index, self) {
-            return self.findIndex(event => event.dateEnd === value.dateEnd) === index;
+            return self.findIndex(event => event.dateEnd === value.dateEnd && event.dateStart === value.dateStart) === index;
         })).events;
     }
 
