@@ -9,10 +9,12 @@ class Event extends React.Component {
     render() {
         return (
             <div className="card">
+                <div className="card-header">
+                    {this.props.event.name}
+                </div>
                 <div className="card-body">
-                    <h5 className="card-title text-muted">{this.props.name}</h5>
-                    <p className="card-text">{this.props.description}</p>
-                    <p className="card-text">{this.props.date}</p>
+                    <p className="card-text">{this.props.event.description}</p>
+                    <p className="card-text">{this.props.event.date}</p>
                 </div>
             </div>
         );
@@ -22,3 +24,5 @@ class Event extends React.Component {
 Event.propTypes = {
     event: PropTypes.object.isRequired
 }
+
+export default Event

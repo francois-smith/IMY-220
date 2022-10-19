@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import EventList from "./components/EventList";
+import DateForm from "./components/DateForm";
 
 let events = [
 	{name: "Picnic", description: "Picnic in the park", date: "2022/09/03"},
@@ -15,9 +16,24 @@ let events = [
 ];
 
 class App extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            date: "2022/09/03"
+        }
+        this.changeDate = this.changeDate.bind(this);
+    }
+
+    changeDate = (newDate) => {
+        this.setState({date: newDate});
+    }
+
     render(){
         return (
-			<EventList events={events} theDate={"2022/09/03"} />
+            <div className="container pt-5">
+                <DateForm date={this.state.date} changeDate={this.changeDate}/>
+                <EventList events={events} theDate={this.state.date} />
+            </div>
         );
     }
 }
