@@ -1,0 +1,12 @@
+
+body{
+    position: relative;
+}
+
+.progressBar{
+    height: 10px;
+    width: 0px;
+    background-color:#888888; 
+    position: fixed;
+    z-index: 100;
+}
